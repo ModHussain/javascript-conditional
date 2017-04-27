@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Conditionals</title>
+    <script src="practice.js"></script>
+	<script>
+	var pwd= function() {
+   
+	var p=document.getElementById("t1").value;
+	if(p.length==0)
+	{
+	document.getElementById("d1").innerHTML = "pwd should not be empty";
+	}
+    else if (p.length < 7) {
+        document.getElementById("d1").innerHTML = "weak";
+    } else if (p.length >= 7 && p.length < 10) {
+        document.getElementById("d1").innerHTML = "medium";
+    } else {
+        document.getElementById("d1").innerHTML = "strong";
+    }
+
+};
+	</script>
+</head>
+<body>
+  <h1>Conditionals Practice</h1>
+  <input type="text" id="t1" name="t1">
+  <input type="button" value="click" onclick="pwd()">
+  <p id="d1"></p>
+</body>
+</html>
